@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Timed Content for Beaver Builder
  * Plugin URI: https://www.brainstormforce.com/
- * Description: Timed Content for Beaver Builder is a custom modules for Beaver Builder to create module which expire after set time.
+ * Description: Timed Content For Beaver builder plugin allows users to hide content after given time.
  * Version: 1.0.0
  * Author: Beaver Builder Addon
  * Author URI: https://www.ultimatebeaver.com/
@@ -13,7 +13,7 @@
 
 define( 'TIMED_CONTENT_BEAVER_BUILDER_DIR', plugin_dir_path( __FILE__ ) );
 define( 'TIMED_CONTENT_BEAVER_BUILDER_URL', plugins_url( '/', __FILE__ ) );
-// 
+
 /**
  * Custom modules
  */

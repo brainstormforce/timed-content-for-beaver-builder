@@ -120,6 +120,7 @@ if( !class_exists( 'Timed_Content_Helper' ) ) {
         		return $options;
 			}
 		}
+
 	    /**
 	     *
 	     * @method get_timed_content
@@ -130,16 +131,6 @@ if( !class_exists( 'Timed_Content_Helper' ) ) {
 	            case 'content':
 	                global $wp_embed;
 	                return wpautop( $wp_embed->autoembed( $settings->ct_content ) );
-	            break;
-	            case 'photo':
-	                if ( isset( $settings->ct_photo_src ) ) {
-	                    return '<img src="' . $settings->ct_photo_src . '" />';
-	                }
-	                return '<img src="" />';
-	            break;
-	            case 'video':
-	                global $wp_embed;
-	                return $wp_embed->autoembed($settings->ct_video);
 	            break;
 	            case 'saved_rows':
 	                ob_start();
@@ -158,6 +149,19 @@ if( !class_exists( 'Timed_Content_Helper' ) ) {
 	                return;
 	            break;
 	        }
+	    }
+
+	    /**
+	     *
+	     * @method get_dropdown_options
+	     */
+		static public function get_dropdown_options( $start, $end ) {
+
+			$option = array();
+			for ($i= $start; $i <= $end; $i++) { 
+				$option[ $i ] = $i;
+			}
+			return $option;
 	    }
 	}
 	new Timed_Content_Helper();
