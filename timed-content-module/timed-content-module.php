@@ -140,9 +140,6 @@ FLBuilder::register_module('BSFBBTimedModule',
 							'default'       => date( 'Y' ),
 							'maxlength'     => '4',
 							'size'          => '5',
-							'preview'      => array(
-								'type'         => 'none',
-							),
 						),
 	                    'hours'       => array(
 	                        'type'          => 'select',

@@ -1,23 +1,24 @@
 <?php
-date_default_timezone_set($settings->time_zone);
-$maintime= time();
-$time = date('G-i-n-j-Y',$maintime);
-$time = explode("-", $time);
-$display = false;
 
-if( $settings->year >= $time[4] ) {
-	if ( $settings->month >= $time[2] ) {
-		if ( $settings->day >= $time[3] ) {
-			if ( $settings->hours < $time[0] ) {
-				if ( $settings->minutes > $time[1] ) {
-					$display = true;
-					echo '5';
-				}
-			}
-		} 
-	}
+$display = true;
+$year = $settings->year;
+$month = $settings->month;
+$day = $settings->day;
+$hour = $settings->hours;
+$minutes = $settings->minutes;;
+
+date_default_timezone_set( $settings->time_zone );
+$date = new DateTime();
+$date->format('Y-n-j H:i');
+$now = $date->getTimestamp();
+
+$set_time = $year. '-' . $month . '-' . $day . ' ' . $hour . ':' . $minutes; 
+$date1 = new DateTime( $set_time );
+$expire = $date1->getTimestamp();
+
+if( $now > $expire ) {
+	$display = false;
 }
-
 
 if ( $display ) {
 	echo Timed_Content_Helper::get_timed_content( $settings );
