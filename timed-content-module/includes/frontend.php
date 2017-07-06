@@ -2,16 +2,17 @@
 
 // if not expired
 
-date_default_timezone_set('Asia/Kolkata');
 
 // $time = $module->get_time();
 
 $maintime= time();
 $time = date('h-i-n-j-Y-a',$maintime);
-
+$time = explode("-", $time);
 $display = false;
 
-if( $settings->year > $time[4] ) {
+date_default_timezone_set($settings->time_zone);
+
+if( $settings->year > $time[5] ) {
 	$display = true;
 }
 elseif ( $settings->month > $time[2] ) {
@@ -24,29 +25,22 @@ elseif ( $settings->day > $time[3] ) {
 // check time
 // }
 
-/*$time = explode("-", $time);
-print_r($time);
-echo '---';
-echo $settings->day;
-echo '-';
-echo $settings->month;
-echo '-';
-echo $settings->year;
-echo '-';
+/*
 echo $settings->time['hours'];
 echo '-';
 echo $settings->time['minutes'];
 echo '-';
 echo $settings->time['day_period'];
 echo '-';*/
-	
+// print_r($settings);
 
-echo Timed_Content_Helper::get_timed_content( $settings );
-// elseif ( isset( $settings->fixed_timer_action ) && $settings->fixed_timer_action == "msg" ){
+if ( $display ) {
+	echo Timed_Content_Helper::get_timed_content( $settings );
+}
+elseif( isset( $settings->fixed_timer_action ) && $settings->fixed_timer_action == "msg" ) {
 
 // expired message
-
-//}
-
+	echo $settings->expire_message;
+}
 // else redirect url
 ?>

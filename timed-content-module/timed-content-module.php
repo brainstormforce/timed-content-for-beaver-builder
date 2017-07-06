@@ -187,13 +187,21 @@ FLBuilder::register_module('BSFBBTimedModule',
                     'fixed_timer_action'       => array(
                         'type'          => 'select',
                         'label'         => __('Action After Timer Expiry', 'uabb'),
-                        'default'       => 'none',
+                        'default'       => 'hide',
                         'class'         => '',
                         'options'       => array(
-                            'none'             => __('None', 'uabb'),
                             'hide'             => __('Hide Content', 'uabb'),
                             'msg'         => __('Display Message', 'uabb'),
                             'redirect'         => __('Redirect User to New URL', 'uabb')
+                        ),
+                      	'toggle'        => array(
+                            'msg'      => array(
+                                //'tabs'      => array( 'testimonials' ),
+                                'fields'     => array('expire_message')
+                            ),
+                            'redirect'      => array(
+                                'fields'     => array( 'redirect_link', 'redirect_link_target' ), //, 'icon_position_half_box'
+                            )
                         ),
                     ),
                     'expire_message'          => array(
