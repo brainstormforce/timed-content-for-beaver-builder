@@ -174,11 +174,21 @@ FLBuilder::register_module('BSFBBTimedModule',
 						'type'          => 'time',
 						'label'         => __( 'Time', 'fl-builder' ),
 						'default'		=> array(
-							'hours'			=> '01',
+							'hours'			=> '15',
 							'minutes'		=> '00',
 							'day_period'	=> 'am',
 						),
 					),
+                    'time_hours'       => array(
+                        'type'          => 'select',
+                        'label'         => __('Hour', 'uabb'),
+                        'class'         => '',
+                        'options'       => array(
+                            '0'             => __('0t', 'uabb'),
+                            '1'         => __('1', 'uabb'),
+                            '2'         => __('2', 'uabb')
+                        ),
+                    ),
 					'time_zone'          => array(
 						'type'          => 'timezone',
 						'label'         => __( 'Time Zone', 'fl-builder' ),
