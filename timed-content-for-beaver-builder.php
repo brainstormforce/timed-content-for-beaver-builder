@@ -13,7 +13,7 @@
 
 define( 'TIMED_CONTENT_BEAVER_BUILDER_DIR', plugin_dir_path( __FILE__ ) );
 define( 'TIMED_CONTENT_BEAVER_BUILDER_URL', plugins_url( '/', __FILE__ ) );
-
+// 
 /**
  * Custom modules
  */
@@ -38,6 +38,7 @@ if ( ! class_exists( 'BSFBBTimedContent' ) ) {
 		function load_timed() {
 			if ( class_exists( 'FLBuilder' ) ) {
 				// If class exist it loads the module.
+				require_once 'class-timed-content-helper.php';
 				require_once 'timed-content-module/timed-content-module.php';
 			} else {
 				// Display admin notice for activating beaver builder.
@@ -52,7 +53,6 @@ if ( ! class_exists( 'BSFBBTimedContent' ) ) {
 		public function load_textdomain() {
 
 			load_plugin_textdomain( 'timed-content-for-beaver-builder' );
-
 		}
 
 		/**

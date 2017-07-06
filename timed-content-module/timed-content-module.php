@@ -52,12 +52,83 @@ FLBuilder::register_module('BSFBBTimedModule',
 		'content'      => array( // Tab.
 			'title'         => __( 'Content', 'bb-timeline' ), // Tab title.
 			'sections'      => array( // Tab Sections.
-				'general'       => array( // Section.
-					'title'         => '', // Section Title.
-					'fields'        => array( // Section Fields.
-						
-					),
-				),
+	  		'content_type' => array(
+                    'fields'    => array(
+                        'content_type'       => array(
+                            'type'          => 'select',
+                            'label'         => __('Type', 'uabb'),
+                            'default'       => 'content',
+                            'options'       => array(
+                                'content'       => __('Content', 'uabb'),
+                                'photo'         => __('Photo', 'uabb'),
+                                'video'         => __('Video Embed Code', 'uabb'),
+                                'saved_rows'        => array(
+                                    'label'         => __('Saved Rows', 'uabb'),
+                                    'premium'       => true
+                                ),
+                                'saved_modules'     => array(
+                                    'label'         => __('Saved Modules', 'uabb'),
+                                    'premium'       => true
+                                ),
+                                'saved_page_templates'      => array(
+                                    'label'         => __('Saved Page Templates', 'uabb'),
+                                    'premium'       => true
+                                ),
+                            ),
+                            'toggle'        => array(
+                                'content'       => array(
+                                    'fields'        => array('ct_content')
+                                ),
+                                'photo'        => array(
+                                    'fields'        => array('ct_photo')
+                                ),
+                                'video'         => array(
+                                    'fields'        => array('ct_video')
+                                ),
+                                'saved_rows'     => array(
+                                    'fields'        => array('ct_saved_rows')
+                                ),
+                                'saved_modules'     => array(
+                                    'fields'        => array('ct_saved_modules')
+                                ),
+                                'saved_page_templates'     => array(
+                                    'fields'        => array('ct_page_templates')
+                                )
+                            )
+                        ),
+                        'ct_content'   => array(
+                            'type'                  => 'editor',
+                            'label'                 => '',
+                            'default'               => '',
+                            'connections'           => array( 'string', 'html' )
+                        ),
+                        'ct_photo'     => array(
+                            'type'                  => 'photo',
+                            'label'                 => __('Select Photo', 'uabb'),
+                            'show_remove'           => true,
+                        ),
+                        'ct_video'     => array(
+                            'type'                  => 'textarea',
+                            'label'                 => __('Embed Code / URL', 'uabb'),
+                            'rows'                  => 6
+                        ),
+                        'ct_saved_rows'      => array(
+                            'type'                  => 'select',
+                            'label'                 => __('Select Row', 'uabb'),
+                            'options'               => Timed_Content_Helper::get_saved_row_template(),
+                        ),
+                        'ct_saved_modules'      => array(
+                            'type'                  => 'select',
+                            'label'                 => __('Select Module', 'uabb'),
+                            'options'               => Timed_Content_Helper::get_saved_module_template(),
+                        ),
+                        'ct_page_templates'      => array(
+                            'type'                  => 'select',
+                            'label'                 => __('Select Page Template', 'uabb'),
+                            'options'               => Timed_Content_Helper::get_saved_page_template(),
+                        )
+                    )
+                )
 			),
 		),
 
@@ -69,36 +140,50 @@ FLBuilder::register_module('BSFBBTimedModule',
 				'layout'       => array( // Section.
 					'title'         => 'Select Time', // Section Title.
 					'fields'        => array( // Section Fields
-					'timer_type'       => array(
-						'type'          => 'select',
-						'label'         => __('Timer Type', 'uabb'),
-						'default'       => 'fixed',
-                        'class'         => '',
-						'options'       => array(
-							'fixed'             => __('Fixed', 'uabb'),
-							'evergreen'             => __('Evergreen', 'uabb')
-						),
-						'toggle'        => array(
-							'fixed'      => array(
-								'fields'	 => array('fixed_date', 'fixed_timer_action' )
-							),
-							'evergreen'      => array(
-                                'fields'     => array( 'evergreen_date', 'evergreen_timer_action' ),
-							)
+                    'day'          => array(
+						'type'          => 'text',
+						'label'         => __( 'Day', 'fl-builder' ),
+						'default'       => date( 'j' ),
+						'maxlength'     => '2',
+						'size'          => '5',
+						'preview'      => array(
+							'type'         => 'none',
 						),
 					),
-                    'fixed_date' => array(
-                        'type'          => 'uabb-normal-date',
-                        'label'         => __( 'Select Date & Time', 'uabb' ),
-                        'default'       => '',
-                        'class'         => '',
-                    ),
-                    'evergreen_date' => array(
-                        'type'          => 'uabb-evergreen-date',
-                        'label'         => __( 'Expire Countdown In', 'uabb' ),
-                        'default'       => '',
-                        'foo'           => 'bar'
-                    ),
+					'month'         => array(
+						'type'          => 'text',
+						'label'         => __( 'Month', 'fl-builder' ),
+						'default'       => date( 'n' ),
+						'maxlength'     => '2',
+						'size'          => '5',
+						'preview'      => array(
+							'type'         => 'none',
+						),
+					),
+					'year'          => array(
+						'type'          => 'text',
+						'label'         => __( 'Year', 'fl-builder' ),
+						'default'       => date( 'Y' ),
+						'maxlength'     => '4',
+						'size'          => '5',
+						'preview'      => array(
+							'type'         => 'none',
+						),
+					),
+					'time'          => array(
+						'type'          => 'time',
+						'label'         => __( 'Time', 'fl-builder' ),
+						'default'		=> array(
+							'hours'			=> '01',
+							'minutes'		=> '00',
+							'day_period'	=> 'am',
+						),
+					),
+					'time_zone'          => array(
+						'type'          => 'timezone',
+						'label'         => __( 'Time Zone', 'fl-builder' ),
+						'default'		=> 'UTC',
+					),
                     'fixed_timer_action'       => array(
                         'type'          => 'select',
                         'label'         => __('Action After Timer Expiry', 'uabb'),
@@ -106,20 +191,7 @@ FLBuilder::register_module('BSFBBTimedModule',
                         'class'         => '',
                         'options'       => array(
                             'none'             => __('None', 'uabb'),
-                            'hide'             => __('Hide Timer', 'uabb'),
-                            'msg'         => __('Display Message', 'uabb'),
-                            'redirect'         => __('Redirect User to New URL', 'uabb')
-                        ),
-                    ),
-                    'evergreen_timer_action'       => array(
-                        'type'          => 'select',
-                        'label'         => __('Action After Timer Expiry', 'uabb'),
-                        'default'       => 'none',
-                        'class'         => '',
-                        'options'       => array(
-                            'none'             => __('None', 'uabb'),
-                            'hide'             => __('Hide Timer', 'uabb'),
-                            'reset'         => __('Reset Timer', 'uabb'),
+                            'hide'             => __('Hide Content', 'uabb'),
                             'msg'         => __('Display Message', 'uabb'),
                             'redirect'         => __('Redirect User to New URL', 'uabb')
                         ),
