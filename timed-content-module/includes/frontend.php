@@ -1,27 +1,23 @@
 <?php
-
 date_default_timezone_set($settings->time_zone);
-
 $maintime= time();
 $time = date('G-i-n-j-Y',$maintime);
 $time = explode("-", $time);
 $display = false;
 
-if( $settings->year > $time[4] ) {
-	$display = true;
+if( $settings->year >= $time[4] ) {
+	if ( $settings->month >= $time[2] ) {
+		if ( $settings->day >= $time[3] ) {
+			if ( $settings->hours < $time[0] ) {
+				if ( $settings->minutes > $time[1] ) {
+					$display = true;
+					echo '5';
+				}
+			}
+		} 
+	}
 }
-elseif ( $settings->month > $time[2] ) {
-	$display = true;
-}
-elseif ( $settings->day > $time[3] ) {
-	$display = true;
-}
-elseif ( $settings->hours > $time[0] ) {
-	$display = true;
-}
-elseif ( $settings->minutes > $time[1] ) {
-	$display = true;
-}
+
 
 if ( $display ) {
 	echo Timed_Content_Helper::get_timed_content( $settings );

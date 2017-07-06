@@ -168,17 +168,13 @@ FLBuilder::register_module('BSFBBTimedModule',
 	                        'class'         => '',
 	                        'options'       => array(
 	                            'hide'             => __('Hide Content', 'timed-content-for-beaver-builder'),
-	                            'msg'         => __('Display Message', 'timed-content-for-beaver-builder'),
-	                            'redirect'         => __('Redirect User to New URL', 'timed-content-for-beaver-builder')
+	                            'msg'         => __('Display Message', 'timed-content-for-beaver-builder')
 	                        ),
 	                      	'toggle'        => array(
 	                            'msg'      => array(
 	                                //'tabs'      => array( 'testimonials' ),
 	                                'fields'     => array('expire_message')
 	                            ),
-	                            'redirect'      => array(
-	                                'fields'     => array( 'redirect_link', 'redirect_link_target' ), //, 'icon_position_half_box'
-	                            )
 	                        ),
 	                    ),
 	                    'expire_message'          => array(
@@ -188,22 +184,6 @@ FLBuilder::register_module('BSFBBTimedModule',
 	                        'rows'          => 6,
 	                        'default'       => __('Enter message text here.','timed-content-for-beaver-builder'),
 	                        'connections' => array( 'string', 'html' )
-	                    ),
-	                    'redirect_link'   => array(
-	                        'type'          => 'link',
-	                        'label'         => __('Enter URL', 'timed-content-for-beaver-builder'),
-	                    ),
-	                    'redirect_link_target'   => array(
-	                        'type'          => 'select',
-	                        'label'         => __('Link Target', 'timed-content-for-beaver-builder'),
-	                        'default'       => '_self',
-	                        'options'       => array(
-	                            '_self'         => __('Same Window', 'timed-content-for-beaver-builder'),
-	                            '_blank'        => __('New Window', 'timed-content-for-beaver-builder')
-	                        ),
-	                        'preview'       => array(
-	                            'type'          => 'none'
-	                        )
 	                    ),
 				)
 				),
