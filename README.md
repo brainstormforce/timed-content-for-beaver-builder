@@ -1,4 +1,5 @@
 # Timed Content For Beaver Builder #
+
 **Contributors:** [brainstormforce](https://profiles.wordpress.org/brainstormforce) 
 **Donate link:** https://www.brainstormforce.com/payment/  
 **Requires at least:** 4.4  
