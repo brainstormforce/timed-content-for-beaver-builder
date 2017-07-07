@@ -6,18 +6,18 @@
  */
 
 $display = $module->is_expired( $settings );
-if( FLBuilderModel::is_builder_active() && ! $display ) { ?>
+if ( FLBuilderModel::is_builder_active() && ! $display ) { ?>
 	.fl-module-timed-content-module.fl-node-<?php echo $id; ?>::before {
-	    content: "Click here to edit Timed Content Module";
-	    position: relative;
-	    width: 100%;
-	    min-height: 50px;
-	    line-height: 50px;
-	    text-align: center;
+		content: "Click here to edit Timed Content Module";
+		position: relative;
+		width: 100%;
+		min-height: 50px;
+		line-height: 50px;
+		text-align: center;
 	  }
 <?php
-} else{
-		if ( ! $display && 'msg' != $settings->fixed_timer_action ) { ?>
+} else {
+	if ( ! $display && 'msg' != $settings->fixed_timer_action ) { ?>
 		.fl-module-timed-content-module.fl-node-<?php echo $id; ?> {
 			display : none;
 		}
