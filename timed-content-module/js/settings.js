@@ -7,6 +7,18 @@
 				required: true
 			}
 		},
+
+    	init: function() {
+        	var form      = $('.fl-builder-settings'),
+            content_type  = form.find('select[name=content_type]'),
+            expiry_action = form.find('select[name=expire_content_action]');
+
+            content_type.on('change', $.proxy( this._toggle, this ) );
+            expiry_action.on('change', $.proxy( this._toggle, this ) );
+
+            $( this._toggle, this );
+        },
+
 		submit: function()
 		{
 			var self = this;
@@ -27,5 +39,18 @@
 			return true;
 
 		},
+
+        _toggle: function () {
+            var form        = $('.fl-builder-settings'),
+                typography    = form.find('.fl-builder-settings-tabs a[href="#fl-builder-settings-tab-timed_typography"]'),
+              	content_type  = form.find('select[name=content_type]').val(),
+            	expiry_action = form.find('select[name=expire_content_action]').val();
+
+            if( content_type != 'content' && expiry_action != 'msg' ) {
+            	typography.hide();
+            } else {
+                typography.show();
+            }
+        },
 	});
 })(jQuery);

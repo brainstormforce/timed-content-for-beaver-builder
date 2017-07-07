@@ -17,7 +17,7 @@ if ( FLBuilderModel::is_builder_active() && ! $display ) { ?>
 	  }
 <?php
 } else {
-	if ( ! $display && 'msg' != $settings->fixed_timer_action ) { ?>
+	if ( ! $display && 'msg' != $settings->expire_content_action ) { ?>
 		.fl-module-timed-content-module.fl-node-<?php echo $id; ?> {
 			display : none;
 		}

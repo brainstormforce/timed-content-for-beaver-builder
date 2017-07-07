@@ -91,8 +91,8 @@ FLBuilder::register_module('BSFBBTimedModule',
 							),
 							'toggle'        => array(
 								'content'       => array(
-									'fields'        => array('ct_content'),
-									'sections'		=> array('timed_content_typography'),
+									'fields'        => array( 'ct_content' ),
+									'sections'		=> array( 'timed_content_typography' ),
 								),
 								'saved_rows'     => array(
 									'fields'        => array( 'ct_saved_rows' ),
@@ -176,7 +176,7 @@ FLBuilder::register_module('BSFBBTimedModule',
 							'label'         => __( 'Time Zone', 'timed-content-for-beaver-builder' ),
 							'default'		=> 'UTC',
 						),
-						'fixed_timer_action'       => array(
+						'expire_content_action'       => array(
 							'type'          => 'select',
 							'label'         => __( 'Action After Timer Expiry', 'timed-content-for-beaver-builder' ),
 							'default'       => 'hide',
@@ -187,8 +187,8 @@ FLBuilder::register_module('BSFBBTimedModule',
 							),
 							  'toggle'        => array(
 								'msg'      => array(
-									'fields'     => array('expire_message'),
-									'sections'	=> array('timed_message_typography'),
+									'fields'     => array( 'expire_message' ),
+									'sections'	=> array( 'timed_message_typography' ),
 								),
 							),
 						),
