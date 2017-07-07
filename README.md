@@ -29,7 +29,7 @@ Hide content / display message after time lapse
 
 Since this module is easy to use and highly customizable, you can use for various applications across the web.
 
-## Applications of the Beaver Builder Cards ##
+## Applications of Timed Content Module ##
 
 Display special offers, discount codes for valid time period & hide it automatically by setting expiry time
 
@@ -38,7 +38,7 @@ Display special offers, discount codes for valid time period & hide it automatic
 Works with all timezones
 Works like any other Beaver Builder module. Thus, it's easy!
 
-Made with love at <a href="https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=description">Brainstorm Force</a>! 
+Made with love at <a href="https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=timed-content-for-bb&utm_medium=description">Brainstorm Force</a>! 
 
 ## What’s More? ##
 
@@ -46,19 +46,19 @@ If you like this plugin, please leave us a good review and rating! Your feedback
 
 You can also consider checking out our other plugins:
 
-<a href=”https://www.ultimatebeaver.com/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Ultimate Addons for Beaver Builder Lite</a>: The Best Addon for Beaver Builder with a huge collection of advanced and creative modules.
+<a href=”https://www.ultimatebeaver.com/?utm_source=wp-repo&utm_campaign=timed-content-for-bb&utm_medium=other-plugins”>Ultimate Addons for Beaver Builder Lite</a>: The Best Addon for Beaver Builder with a huge collection of advanced and creative modules.
 
-<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/expandable-row/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Expandable Row for Beaver Builder</a>: An advanced plugin that lets you expand your Beaver Builder rows.
+<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/expandable-row/?utm_source=wp-repo&utm_campaign=timed-content-for-bb&utm_medium=other-plugins”>Expandable Row for Beaver Builder</a>: An advanced plugin that lets you expand your Beaver Builder rows.
 
-<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbcards/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Timeline module for Beaver Builder</a>: An advanced module to create attractive and responsive timelines using Beaver Builder.
+<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/timed-content-for-bb?utm_source=wp-repo&utm_campaign=timed-content-for-bb&utm_medium=other-plugins”>Timeline module for Beaver Builder</a>: An advanced module to create attractive and responsive timelines using Beaver Builder.
 
-<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbalerts/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Beaver Builder Alerts</a>: An advanced module to create attention seeking alerts in Beaver Builder.
+<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbalerts/?utm_source=wp-repo&utm_campaign=timed-content-for-bb&utm_medium=other-plugins”>Beaver Builder Alerts</a>: An advanced module to create attention seeking alerts in Beaver Builder.
 
-<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bb-header-footer/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Beaver Builder Header Footer</a>: Design beautiful headers and footers with Beaver Builder.
+<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bb-header-footer/?utm_source=wp-repo&utm_campaign=timed-content-for-bb&utm_medium=other-plugins”>Beaver Builder Header Footer</a>: Design beautiful headers and footers with Beaver Builder.
 
-<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/column-seperator/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Column Separator for Beaver Builder</a>: This plugin will no longer leave you pondering for a column separator in Beaver Builder. You can add it right away!
+<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/column-seperator/?utm_source=wp-repo&utm_campaign=timed-content-for-bb&utm_medium=other-plugins”>Column Separator for Beaver Builder</a>: This plugin will no longer leave you pondering for a column separator in Beaver Builder. You can add it right away!
  
-Visit our website to know more about the top WordPress products and services we offer. You can also stay updated with our upcoming endeavors by following us on <a href=”https://www.brainstormforce.com/go/brainstorm-force-facebook-page/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=share”>Facebook</a> and <a href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=share”>Twitter</a>.
+Visit our website to know more about the top WordPress products and services we offer. You can also stay updated with our upcoming endeavors by following us on <a href=”https://www.brainstormforce.com/go/brainstorm-force-facebook-page/?utm_source=wp-repo&utm_campaign=timed-content-for-bb&utm_medium=share”>Facebook</a> and <a href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_source=wp-repo&utm_campaign=timed-content-for-bb&utm_medium=share”>Twitter</a>.
 
 ## Acknowledgements ##
 Props to <a href="http://www.tlc-online.co.uk/" target="_blank">TLC Online</a> for their idea and sponsoring development of this Beaver Builder module.
