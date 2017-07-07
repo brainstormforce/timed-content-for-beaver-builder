@@ -1,4 +1,9 @@
 <?php
+/**
+ * Frontend view
+ *
+ * @package timed-content-for-beaver-builder
+ */
 
 $display = true;
 $year = isset( $settings->year ) ? $settings->year : date( 'Y' );
@@ -9,22 +14,20 @@ $minutes = isset( $settings->minutes ) ? $settings->minutes :'0';
 
 date_default_timezone_set( $settings->time_zone );
 $date = new DateTime();
-$date->format('Y-n-j H:i');
+$date->format( 'Y-n-j H:i' );
 $now = $date->getTimestamp();
 
-$set_time = $year. '-' . $month . '-' . $day . ' ' . $hour . ':' . $minutes; 
+$set_time = $year . '-' . $month . '-' . $day . ' ' . $hour . ':' . $minutes;
 $date1 = new DateTime( $set_time );
 $expire = $date1->getTimestamp();
 
-if( $now > $expire ) {
+if ( $expire < $now ) {
 	$display = false;
 }
 
 if ( $display ) {
 	echo Timed_Content_Helper::get_timed_content( $settings );
-}
-elseif( isset( $settings->fixed_timer_action ) && $settings->fixed_timer_action == "msg" ) { ?>
+} elseif ( isset( $settings->fixed_timer_action ) && 'msg' == $settings->fixed_timer_action ) { ?>
 	<div class='timed-content-message'><?php echo $settings->expire_message; ?></div>
 <?php }
-// else redirect url
 ?>

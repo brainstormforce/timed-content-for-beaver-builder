@@ -48,93 +48,93 @@ class BSFBBTimedModule extends FLBuilderModule {
 FLBuilder::register_module('BSFBBTimedModule',
 	array(
 
-		// Add Timeline.
+		// Add Timed.
 		'content'      => array( // Tab.
 			'title'         => __( 'Content', 'timed-content-for-beaver-builder' ), // Tab title.
 			'sections'      => array( // Tab Sections.
-	  		'content_type' => array(
-                    'fields'    => array(
-                        'content_type'       => array(
-                            'type'          => 'select',
-                            'label'         => __('Type', 'timed-content-for-beaver-builder'),
-                            'default'       => 'content',
-                            'options'       => array(
-                                'content'       => __('Content', 'timed-content-for-beaver-builder'),
-                                'saved_rows'        => array(
-                                    'label'         => __('Saved Rows', 'timed-content-for-beaver-builder'),
-                                    'premium'       => true
-                                ),
-                                'saved_modules'     => array(
-                                    'label'         => __('Saved Modules', 'timed-content-for-beaver-builder'),
-                                    'premium'       => true
-                                ),
-                                'saved_page_templates'      => array(
-                                    'label'         => __('Saved Page Templates', 'timed-content-for-beaver-builder'),
-                                    'premium'       => true
-                                ),
-                            ),
-                            'toggle'        => array(
-                                'content'       => array(
-                                    'fields'        => array('ct_content')
-                                ),
-                                'saved_rows'     => array(
-                                    'fields'        => array('ct_saved_rows')
-                                ),
-                                'saved_modules'     => array(
-                                    'fields'        => array('ct_saved_modules')
-                                ),
-                                'saved_page_templates'     => array(
-                                    'fields'        => array('ct_page_templates')
-                                )
-                            )
-                        ),
-                        'ct_content'   => array(
-                            'type'                  => 'editor',
-                            'label'                 => '',
-                            'default'               => '',
-                            'connections'           => array( 'string', 'html' )
-                        ),
-                        'ct_saved_rows'      => array(
-                            'type'                  => 'select',
-                            'label'                 => __('Select Row', 'timed-content-for-beaver-builder'),
-                            'options'               => Timed_Content_Helper::get_saved_row_template(),
-                        ),
-                        'ct_saved_modules'      => array(
-                            'type'                  => 'select',
-                            'label'                 => __('Select Module', 'timed-content-for-beaver-builder'),
-                            'options'               => Timed_Content_Helper::get_saved_module_template(),
-                        ),
-                        'ct_page_templates'      => array(
-                            'type'                  => 'select',
-                            'label'                 => __('Select Page Template', 'timed-content-for-beaver-builder'),
-                            'options'               => Timed_Content_Helper::get_saved_page_template(),
-                        )
-                    )
-                )
+			  'content_type' => array(
+					'fields'    => array(
+						'content_type'       => array(
+							'type'          => 'select',
+							'label'         => __( 'Type', 'timed-content-for-beaver-builder' ),
+							'default'       => 'content',
+							'options'       => array(
+								'content'       => __( 'Content', 'timed-content-for-beaver-builder' ),
+								'saved_rows'        => array(
+									'label'         => __( 'Saved Rows', 'timed-content-for-beaver-builder' ),
+									'premium'       => true,
+								),
+								'saved_modules'     => array(
+									'label'         => __( 'Saved Modules', 'timed-content-for-beaver-builder' ),
+									'premium'       => true,
+								),
+								'saved_page_templates'      => array(
+									'label'         => __( 'Saved Page Templates', 'timed-content-for-beaver-builder' ),
+									'premium'       => true,
+								),
+							),
+							'toggle'        => array(
+								'content'       => array(
+									'fields'        => array( 'ct_content' ),
+								),
+								'saved_rows'     => array(
+									'fields'        => array( 'ct_saved_rows' ),
+								),
+								'saved_modules'     => array(
+									'fields'        => array( 'ct_saved_modules' ),
+								),
+								'saved_page_templates'     => array(
+									'fields'        => array( 'ct_page_templates' ),
+								),
+							),
+						),
+						'ct_content'   => array(
+							'type'                  => 'editor',
+							'label'                 => '',
+							'default'               => '',
+							'connections'           => array( 'string', 'html' ),
+						),
+						'ct_saved_rows'      => array(
+							'type'                  => 'select',
+							'label'                 => __( 'Select Row', 'timed-content-for-beaver-builder' ),
+							'options'               => Timed_Content_Helper::get_saved_row_template(),
+						),
+						'ct_saved_modules'      => array(
+							'type'                  => 'select',
+							'label'                 => __( 'Select Module', 'timed-content-for-beaver-builder' ),
+							'options'               => Timed_Content_Helper::get_saved_module_template(),
+						),
+						'ct_page_templates'      => array(
+							'type'                  => 'select',
+							'label'                 => __( 'Select Page Template', 'timed-content-for-beaver-builder' ),
+							'options'               => Timed_Content_Helper::get_saved_page_template(),
+						),
+					),
+				),
 			),
 		),
 
-		// Timeline Style.
+		// Timed Style.
 		'settings'     => array(
 			'title'         => __( 'Settings', 'timed-content-for-beaver-builder' ),
 			'sections'      => array(
-				// Timeline layout Option.
+				// Timed layout Option.
 				'layout'       => array( // Section.
 					'title'         => 'Select Time', // Section Title.
-					'fields'        => array( // Section Fields
-	                    'day'       => array(
-	                        'type'          => 'select',
-	                        'label'         => __('Day', 'timed-content-for-beaver-builder'),
-	                        'default'		=> date( 'j' ),
-	                        'options'       => Timed_Content_Helper::get_dropdown_options( 1, 31),
-	                    ),
+					'fields'        => array( // Section Fields.
+						'day'       => array(
+							'type'          => 'select',
+							'label'         => __( 'Day', 'timed-content-for-beaver-builder' ),
+							'default'		=> date( 'j' ),
+							'options'       => Timed_Content_Helper::get_dropdown_options( 1, 31 ),
+						),
 						'month'       => array(
-	                        'type'          => 'select',
-	                        'label'         => __('Month', 'timed-content-for-beaver-builder'),
-	                        'class'         => '',
-	                        'default'		=> date( 'n' ),
-	                        'options'       => Timed_Content_Helper::get_dropdown_options( 1, 12),
-	                    ),
+							'type'          => 'select',
+							'label'         => __( 'Month', 'timed-content-for-beaver-builder' ),
+							'class'         => '',
+							'default'		=> date( 'n' ),
+							'options'       => Timed_Content_Helper::get_dropdown_options( 1, 12 ),
+						),
 						'year'          => array(
 							'type'          => 'text',
 							'label'         => __( 'Year', 'timed-content-for-beaver-builder' ),
@@ -142,57 +142,57 @@ FLBuilder::register_module('BSFBBTimedModule',
 							'maxlength'     => '4',
 							'size'          => '5',
 						),
-	                    'hours'       => array(
-	                        'type'          => 'select',
-	                        'default'       => '24',
-	                        'label'         => __('Hour', 'timed-content-for-beaver-builder'),
-	                        'options'       => Timed_Content_Helper::get_dropdown_options( 0, 23),
-	                    ),
-	                    'minutes'   => array(
-	                        'type'          => 'select',
-	                        'default'       => '0',
-	                        'label'         => __('Minutes', 'timed-content-for-beaver-builder'),
-	                        'options'       => Timed_Content_Helper::get_dropdown_options( 0, 59),
-	                    ),
+						'hours'       => array(
+							'type'          => 'select',
+							'default'       => '23',
+							'label'         => __( 'Hour', 'timed-content-for-beaver-builder' ),
+							'options'       => Timed_Content_Helper::get_dropdown_options( 0, 23 ),
+						),
+						'minutes'   => array(
+							'type'          => 'select',
+							'default'       => '0',
+							'label'         => __( 'Minutes', 'timed-content-for-beaver-builder' ),
+							'options'       => Timed_Content_Helper::get_dropdown_options( 0, 59 ),
+						),
 						'time_zone'          => array(
 							'type'          => 'timezone',
 							'label'         => __( 'Time Zone', 'timed-content-for-beaver-builder' ),
 							'default'		=> 'UTC',
 						),
-	                    'fixed_timer_action'       => array(
-	                        'type'          => 'select',
-	                        'label'         => __('Action After Timer Expiry', 'timed-content-for-beaver-builder'),
-	                        'default'       => 'hide',
-	                        'class'         => '',
-	                        'options'       => array(
-	                            'hide'             => __('Hide Content', 'timed-content-for-beaver-builder'),
-	                            'msg'         => __('Display Message', 'timed-content-for-beaver-builder')
-	                        ),
-	                      	'toggle'        => array(
-	                            'msg'      => array(
-	                                'tabs'      => array( 'timed_typography' ),
-	                                'fields'     => array('expire_message')
-	                            ),
-	                        ),
-	                    ),
-	                    'expire_message'          => array(
-	                        'type'          => 'editor',
-	                        'label'         => '',
-	                        'media_buttons' => false,
-	                        'rows'          => 6,
-	                        'default'       => __('Enter message text here.','timed-content-for-beaver-builder'),
-	                        'connections' => array( 'string', 'html' )
-	                    ),
-				)
+						'fixed_timer_action'       => array(
+							'type'          => 'select',
+							'label'         => __( 'Action After Timer Expiry', 'timed-content-for-beaver-builder' ),
+							'default'       => 'hide',
+							'class'         => '',
+							'options'       => array(
+								'hide'             => __( 'Hide Content', 'timed-content-for-beaver-builder' ),
+								'msg'         => __( 'Display Message', 'timed-content-for-beaver-builder' ),
+							),
+							  'toggle'        => array(
+								'msg'      => array(
+									'tabs'      => array( 'timed_typography' ),
+									'fields'     => array( 'expire_message' ),
+								),
+							),
+						),
+						'expire_message'          => array(
+							'type'          => 'editor',
+							'label'         => '',
+							'media_buttons' => false,
+							'rows'          => 6,
+							'default'       => __( 'Enter message text here.','timed-content-for-beaver-builder' ),
+							'connections' => array( 'string', 'html' ),
+						),
+				),
 				),
 			),
 		),
 
-		// Typography
+		// Typography.
 		'timed_typography'         => array(
 			'title'         => __( 'Typography', 'timed-content-for-beaver-builder' ),
 			'sections'      => array(
-				// Timeline Date.
+				// Timed Date.
 				'timed_message_typography'     => array(
 					'title'         => __( 'Message', 'timed-content-for-beaver-builder' ),
 					'fields'        => array(

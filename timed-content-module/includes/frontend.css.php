@@ -1,5 +1,10 @@
 <?php
-/* Timed Content Typography */
+/**
+ * Frontend options css
+ *
+ * @package timed-content-for-beaver-builder
+ */
+
 if ( ! empty( $settings->timed_msg_font ) && 'Default' != $settings->timed_msg_font['family'] ) : ?>
 .fl-node-<?php echo $id; ?> .timed-content-message p {
 	<?php FLBuilderFonts::font_css( $settings->timed_msg_font ); ?>
