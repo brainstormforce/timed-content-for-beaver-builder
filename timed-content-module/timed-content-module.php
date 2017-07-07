@@ -91,7 +91,8 @@ FLBuilder::register_module('BSFBBTimedModule',
 							),
 							'toggle'        => array(
 								'content'       => array(
-									'fields'        => array( 'ct_content' ),
+									'fields'        => array('ct_content'),
+									'sections'		=> array('timed_content_typography'),
 								),
 								'saved_rows'     => array(
 									'fields'        => array( 'ct_saved_rows' ),
@@ -182,12 +183,12 @@ FLBuilder::register_module('BSFBBTimedModule',
 							'class'         => '',
 							'options'       => array(
 								'hide'             => __( 'Hide Content', 'timed-content-for-beaver-builder' ),
-								'msg'         => __( 'Display Message', 'timed-content-for-beaver-builder' ),
+								'msg'         => __( 'Display Expiry Message', 'timed-content-for-beaver-builder' ),
 							),
 							  'toggle'        => array(
 								'msg'      => array(
-									'tabs'      => array( 'timed_typography' ),
-									'fields'     => array( 'expire_message' ),
+									'fields'     => array('expire_message'),
+									'sections'	=> array('timed_message_typography'),
 								),
 							),
 						),
@@ -210,12 +211,12 @@ FLBuilder::register_module('BSFBBTimedModule',
 			'sections'      => array(
 				// Timed Date.
 				'timed_message_typography'     => array(
-					'title'         => __( 'Message', 'timed-content-for-beaver-builder' ),
+					'title'         => __( 'Expiry Message', 'timed-content-for-beaver-builder' ),
 					'fields'        => array(
 						'timed_tag_selection'   => array(
 							'type'          => 'select',
 							'label'         => __( 'Message Tag', 'timed-content-for-beaver-builder' ),
-							'default'       => 'h3',
+							'default'       => 'h4',
 							'options'       => array(
 								'h1'      => __( 'H1', 'timed-content-for-beaver-builder' ),
 								'h2'      => __( 'H2', 'timed-content-for-beaver-builder' ),
@@ -253,6 +254,7 @@ FLBuilder::register_module('BSFBBTimedModule',
 							'type'          => 'text',
 							'label'         => __( 'Line Height', 'timed-content-for-beaver-builder' ),
 							'maxlength'     => '4',
+							'default'    => '',
 							'size'          => '4',
 							'description'   => 'px',
 						),
@@ -260,8 +262,8 @@ FLBuilder::register_module('BSFBBTimedModule',
 						'timed_msg_letter_spacing' => array(
 							'type'          => 'text',
 							'label'         => __( 'Letter Spacing', 'timed-content-for-beaver-builder' ),
-							'default'       => '0',
 							'maxlength'     => '3',
+							'default'    => '',
 							'size'          => '4',
 							'description'   => 'px',
 						),
@@ -275,6 +277,61 @@ FLBuilder::register_module('BSFBBTimedModule',
 								'type' => 'css',
 								'property' => 'color',
 								'selector' => '.timed-content-message p',
+							),
+						),
+					),
+				),
+				// Timed Date.
+				'timed_content_typography'     => array(
+					'title'         => __( 'Content', 'timed-content-for-beaver-builder' ),
+					'fields'        => array(
+						'timed_content_font'          => array(
+							'type'          => 'font',
+							'default'       => array(
+								'family'        => 'Default',
+								'weight'        => 300,
+							),
+							'label'         => __( 'Font Family', 'timed-content-for-beaver-builder' ),
+							'preview'         => array(
+								'type'            => 'font',
+								'selector'        => '.timed-content-wrapper',
+							),
+						),
+
+						'timed_content_size' => array(
+							'type'              => 'text',
+							'label'             => __( 'Font Size', 'timed-content-for-beaver-builder' ),
+							'maxlength'         => '3',
+							'size'              => '4',
+							'description'       => 'px',
+						),
+
+						'timed_content_line_height' => array(
+							'type'          => 'text',
+							'label'         => __( 'Line Height', 'timed-content-for-beaver-builder' ),
+							'maxlength'     => '4',
+							'size'          => '4',
+							'description'   => 'px',
+						),
+
+						'timed_content_letter_spacing' => array(
+							'type'          => 'text',
+							'label'         => __( 'Letter Spacing', 'timed-content-for-beaver-builder' ),
+							'default'       => '',
+							'maxlength'     => '3',
+							'size'          => '4',
+							'description'   => 'px',
+						),
+
+						'timed_content_color'    => array(
+							'type'       => 'color',
+							'label'         => __( 'Text Color', 'timed-content-for-beaver-builder' ),
+							'default'    => '',
+							'show_reset' => true,
+							'preview'       => array(
+								'type' => 'css',
+								'property' => 'color',
+								'selector' => '.timed-content-wrapper',
 							),
 						),
 					),
