@@ -1,8 +1,8 @@
 # Timed Content For Beaver Builder #
 
-**Contributors:** [brainstormforce](https://profiles.wordpress.org/brainstormforce) 
-**Donate link:** https://www.brainstormforce.com/payment/  
-**Requires at least:** 4.4  
+**Contributors:** [brainstormforce](https://profiles.wordpress.org/brainstormforce)
+**Donate link:** https://www.brainstormforce.com/payment/
+**Requires at least:** 4.4
 **Tags:** beaver builder, page builder plugin, timed content, php based timed content
 **Stable tag:** 1.0.0
 **Tested up to:** 4.8
@@ -21,7 +21,7 @@ A very easy to use plugin to hide content automatically after given time. Its pu
 
 The Timed Content for Beaver Builder plugin adds an advanced custom module to the basic page builder, making it easy for users to hide content after given time. Like all the other Beaver Builder modules, the Timed Content module can simply be dragged and dropped on a page, followed by the additional customizations.
 
-## Features of the Beaver Builder Cards ##
+## Features of the Timed Content Module ##
 
 Easy setting to display saved templates
 Works with all timezones
