@@ -29,18 +29,33 @@ class BSFBBTimedModule extends FLBuilderModule {
 	}
 
 	/**
-	 * Summary
-	 *
-	 * @method update
+	 * Check module expiry
 	 * @param object $settings Setting object.
 	 * @return object
 	 */
-	public function update( $settings ) {
-		return $settings;
+	public function is_expired( $settings ) {
+		$display = true;
+		$year = isset( $settings->year ) ? $settings->year : date( 'Y' );
+		$month = isset( $settings->month ) ? $settings->month : date( 'n' );
+		$day = isset( $settings->day ) ? $settings->day : date( 'j' );
+		$hour = isset( $settings->hours ) ? $settings->hours :'24';
+		$minutes = isset( $settings->minutes ) ? $settings->minutes :'0';
+
+		date_default_timezone_set( $settings->time_zone );
+		$date = new DateTime();
+		$date->format( 'Y-n-j H:i' );
+		$now = $date->getTimestamp();
+
+		$set_time = $year . '-' . $month . '-' . $day . ' ' . $hour . ':' . $minutes;
+		$date1 = new DateTime( $set_time );
+		$expire = $date1->getTimestamp();
+
+		if ( $expire < $now ) {
+			$display = false;
+		}
+		return $display;
 	}
 }
-
-
 
 /**
  * Register the module and its form settings.
@@ -196,6 +211,22 @@ FLBuilder::register_module('BSFBBTimedModule',
 				'timed_message_typography'     => array(
 					'title'         => __( 'Message', 'timed-content-for-beaver-builder' ),
 					'fields'        => array(
+						'timed_tag_selection'   => array(
+			                'type'          => 'select',
+			                'label'         => __('Message Tag', 'timed-content-for-beaver-builder'),
+			                'default'       => 'h3',
+			                'options'       => array(
+			                    'h1'      => __('H1', 'timed-content-for-beaver-builder'),
+			                    'h2'      => __('H2', 'timed-content-for-beaver-builder'),
+			                    'h3'      => __('H3', 'timed-content-for-beaver-builder'),
+			                    'h4'      => __('H4', 'timed-content-for-beaver-builder'),
+			                    'h5'      => __('H5', 'timed-content-for-beaver-builder'),
+			                    'h6'      => __('H6', 'timed-content-for-beaver-builder'),
+			                    'div'     => __('Div', 'timed-content-for-beaver-builder'),
+			                    'p'       => __('p', 'timed-content-for-beaver-builder'),
+			                    'span'    => __('span', 'timed-content-for-beaver-builder'),
+			                )
+			            ),
 						'timed_msg_font'          => array(
 							'type'          => 'font',
 							'default'       => array(
@@ -212,7 +243,6 @@ FLBuilder::register_module('BSFBBTimedModule',
 						'timed_msg_size' => array(
 							'type'              => 'text',
 							'label'             => __( 'Font Size', 'timed-content-for-beaver-builder' ),
-							'default'           => '18',
 							'maxlength'         => '3',
 							'size'              => '4',
 							'description'       => 'px',
