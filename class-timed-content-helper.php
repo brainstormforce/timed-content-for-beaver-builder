@@ -147,21 +147,21 @@ if ( ! class_exists( 'Timed_Content_Helper' ) ) {
 					return wpautop( $wp_embed->autoembed( $settings->ct_content ) );
 				break;
 				case 'saved_rows':
-					if( is_callable( 'FLBuilderShortcodes::insert_layout' ) ) {
+					if ( is_callable( 'FLBuilderShortcodes::insert_layout' ) ) {
 						$rows = FLBuilderShortcodes::insert_layout( array(
 							'id' => $settings->ct_saved_rows,
 						) );
 						return $rows;
 					}
 				case 'saved_modules':
-					if( is_callable( 'FLBuilderShortcodes::insert_layout' ) ) {
+					if ( is_callable( 'FLBuilderShortcodes::insert_layout' ) ) {
 						$module = FLBuilderShortcodes::insert_layout( array(
 							'id' => $settings->ct_saved_modules,
 						) );
 					}
 					return $module;
 				case 'saved_page_templates':
-					if( is_callable( 'FLBuilderShortcodes::insert_layout' ) ) {
+					if ( is_callable( 'FLBuilderShortcodes::insert_layout' ) ) {
 						$template = FLBuilderShortcodes::insert_layout( array(
 							'id' => $settings->ct_page_templates,
 						) );
