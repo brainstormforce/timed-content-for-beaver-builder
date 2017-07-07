@@ -146,13 +146,13 @@ FLBuilder::register_module('BSFBBTimedModule',
 	                        'type'          => 'select',
 	                        'default'       => '24',
 	                        'label'         => __('Hour', 'timed-content-for-beaver-builder'),
-	                        'options'       => Timed_Content_Helper::get_dropdown_options( 0, 24),
+	                        'options'       => Timed_Content_Helper::get_dropdown_options( 0, 23),
 	                    ),
 	                    'minutes'   => array(
 	                        'type'          => 'select',
 	                        'default'       => '0',
 	                        'label'         => __('Minutes', 'timed-content-for-beaver-builder'),
-	                        'options'       => Timed_Content_Helper::get_dropdown_options( 0, 60),
+	                        'options'       => Timed_Content_Helper::get_dropdown_options( 0, 59),
 	                    ),
 						'time_zone'          => array(
 							'type'          => 'timezone',
@@ -170,7 +170,7 @@ FLBuilder::register_module('BSFBBTimedModule',
 	                        ),
 	                      	'toggle'        => array(
 	                            'msg'      => array(
-	                                //'tabs'      => array( 'testimonials' ),
+	                                'tabs'      => array( 'timed_typography' ),
 	                                'fields'     => array('expire_message')
 	                            ),
 	                        ),
