@@ -147,17 +147,26 @@ if ( ! class_exists( 'Timed_Content_Helper' ) ) {
 					return wpautop( $wp_embed->autoembed( $settings->ct_content ) );
 				break;
 				case 'saved_rows':
-					ob_start();
-					echo do_shortcode( '[fl_builder_insert_layout id="' . $settings->ct_saved_rows . '" type="fl-builder-template"]' );
-					return ob_get_clean();
+					if( is_callable( 'FLBuilderShortcodes::insert_layout' ) ) {
+						$rows = FLBuilderShortcodes::insert_layout( array(
+							'id' => $settings->ct_saved_rows,
+						) );
+						return $rows;
+					}
 				case 'saved_modules':
-					ob_start();
-					echo do_shortcode( '[fl_builder_insert_layout id="' . $settings->ct_saved_modules . '" type="fl-builder-template"]' );
-					return ob_get_clean();
+					if( is_callable( 'FLBuilderShortcodes::insert_layout' ) ) {
+						$module = FLBuilderShortcodes::insert_layout( array(
+							'id' => $settings->ct_saved_modules,
+						) );
+					}
+					return $module;
 				case 'saved_page_templates':
-					ob_start();
-					echo do_shortcode( '[fl_builder_insert_layout id="' . $settings->ct_page_templates . '" type="fl-builder-template"]' );
-					return ob_get_clean();
+					if( is_callable( 'FLBuilderShortcodes::insert_layout' ) ) {
+						$template = FLBuilderShortcodes::insert_layout( array(
+							'id' => $settings->ct_page_templates,
+						) );
+					}
+					return $template;
 				break;
 				default:
 					return;
