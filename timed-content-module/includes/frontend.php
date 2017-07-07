@@ -1,11 +1,11 @@
 <?php
 
 $display = true;
-$year = $settings->year;
-$month = $settings->month;
-$day = $settings->day;
-$hour = $settings->hours;
-$minutes = $settings->minutes;;
+$year = isset( $settings->year ) ? $settings->year : date( 'Y' );
+$month = isset( $settings->month ) ? $settings->month : date( 'n' );
+$day = isset( $settings->day ) ? $settings->day : date( 'j' );
+$hour = isset( $settings->hours ) ? $settings->hours :'24';
+$minutes = isset( $settings->minutes ) ? $settings->minutes :'0';
 
 date_default_timezone_set( $settings->time_zone );
 $date = new DateTime();
