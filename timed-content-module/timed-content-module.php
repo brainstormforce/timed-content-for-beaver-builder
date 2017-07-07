@@ -30,6 +30,7 @@ class BSFBBTimedModule extends FLBuilderModule {
 
 	/**
 	 * Check module expiry
+	 *
 	 * @param object $settings Setting object.
 	 * @return object
 	 */
@@ -212,21 +213,21 @@ FLBuilder::register_module('BSFBBTimedModule',
 					'title'         => __( 'Message', 'timed-content-for-beaver-builder' ),
 					'fields'        => array(
 						'timed_tag_selection'   => array(
-			                'type'          => 'select',
-			                'label'         => __('Message Tag', 'timed-content-for-beaver-builder'),
-			                'default'       => 'h3',
-			                'options'       => array(
-			                    'h1'      => __('H1', 'timed-content-for-beaver-builder'),
-			                    'h2'      => __('H2', 'timed-content-for-beaver-builder'),
-			                    'h3'      => __('H3', 'timed-content-for-beaver-builder'),
-			                    'h4'      => __('H4', 'timed-content-for-beaver-builder'),
-			                    'h5'      => __('H5', 'timed-content-for-beaver-builder'),
-			                    'h6'      => __('H6', 'timed-content-for-beaver-builder'),
-			                    'div'     => __('Div', 'timed-content-for-beaver-builder'),
-			                    'p'       => __('p', 'timed-content-for-beaver-builder'),
-			                    'span'    => __('span', 'timed-content-for-beaver-builder'),
-			                )
-			            ),
+							'type'          => 'select',
+							'label'         => __( 'Message Tag', 'timed-content-for-beaver-builder' ),
+							'default'       => 'h3',
+							'options'       => array(
+								'h1'      => __( 'H1', 'timed-content-for-beaver-builder' ),
+								'h2'      => __( 'H2', 'timed-content-for-beaver-builder' ),
+								'h3'      => __( 'H3', 'timed-content-for-beaver-builder' ),
+								'h4'      => __( 'H4', 'timed-content-for-beaver-builder' ),
+								'h5'      => __( 'H5', 'timed-content-for-beaver-builder' ),
+								'h6'      => __( 'H6', 'timed-content-for-beaver-builder' ),
+								'div'     => __( 'Div', 'timed-content-for-beaver-builder' ),
+								'p'       => __( 'p', 'timed-content-for-beaver-builder' ),
+								'span'    => __( 'span', 'timed-content-for-beaver-builder' ),
+							),
+						),
 						'timed_msg_font'          => array(
 							'type'          => 'font',
 							'default'       => array(

@@ -7,7 +7,7 @@
 
 $display = $module->is_expired( $settings );
 
-if( ! $display && 'msg' != $settings->fixed_timer_action ) { ?>
+if ( ! $display && 'msg' != $settings->fixed_timer_action ) { ?>
 	.fl-module-timed-content-module.fl-node-<?php echo $id; ?> {
 		display : none;
 	}
