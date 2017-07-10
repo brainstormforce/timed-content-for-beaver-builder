@@ -1,21 +1,14 @@
-# Timed Content For Beaver Builder #
-
-**Contributors:** [brainstormforce](https://profiles.wordpress.org/brainstormforce)
-**Donate link:** https://www.brainstormforce.com/payment/
-**Requires at least:** 4.4
-**Tags:** beaver builder, page builder plugin, timed content, php based timed content
-**Stable tag:** 1.0.0
-**Tested up to:** 4.8
-**License:** GPLv2 or later  
-**License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
-
-**URL :** https://wordpress.org/plugins/timed-content-for-beaver-builder/  
- 
-Timed Content For Beaver Builder
- 
+=== Timed Content For Beaver Builder ===
+Contributors: brainstormforce
+Donate link: https://www.brainstormforce.com/payment/
+Requires at least: 4.4
+Tags: beaver builder, page builder plugin, timed content, php based timed content
+Stable tag: 1.0.0
+Tested up to: 4.8
+License: GPLv2 or later  
+License URI: http://www.gnu.org/licenses/gpl-2.0.html  
+  
 A very easy to use plugin to hide content automatically after given time. Its purely PHP based plugin, so it removes content from source as well.
-
-**Tags:** beaver builder, page builder plugin, timed content, php based timed content 
 
 ## Description ##
 
