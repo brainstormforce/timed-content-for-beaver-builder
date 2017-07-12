@@ -1,9 +1,9 @@
 === Timed Content For Beaver Builder ===
-Contributors: brainstormforce
+Contributors: brainstormforce, rahulwalunje-1
 Donate link: https://www.brainstormforce.com/payment/
 Requires at least: 4.4
 Tags: beaver builder, page builder plugin, timed content, php based timed content
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Tested up to: 4.8
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
@@ -16,20 +16,14 @@ The Timed Content for Beaver Builder plugin adds an advanced custom module to th
 
 ## Features of the Timed Content Module ##
 
-Easy setting to display saved templates
-Works with all timezones
-Hide content / display message after time lapse
+-	Easy setting to display saved templates
+-	Hide content / display message after time lapse
 
 Since this module is easy to use and highly customizable, you can use for various applications across the web.
 
 ## Applications of Timed Content Module ##
 
-Display special offers, discount codes for valid time period & hide it automatically by setting expiry time
-
-## Advantages of Timed Content Module ##
-
-Works with all timezones
-Works like any other Beaver Builder module. Thus, it's easy!
+-	Display special offers, discount codes for valid time period & hide it automatically by setting expiry time
 
 Made with love at <a href="https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=timed-content-for-bb&utm_medium=description">Brainstorm Force</a>! 
 
@@ -69,8 +63,14 @@ Props to <a href="http://www.tlc-online.co.uk/" target="_blank">TLC Online</a> f
 ## Frequently Asked Questions ##
 
 ## Screenshots ##
+1. Content options 
+2. Set Start and End Time option
+3. Typography options 
 
 ## Changelog ##
+
+### 1.0.1 ###
+- New : Start Date Time option
 
 ### 1.0.0 ###
 - Initial release
