@@ -42,16 +42,60 @@ class BSFBBTimedModule extends FLBuilderModule {
 		$hour = isset( $settings->hours ) ? $settings->hours :'24';
 		$minutes = isset( $settings->minutes ) ? $settings->minutes :'0';
 
+		$start_year = isset( $settings->start_year ) ? $settings->start_year : date( 'Y' );
+		$start_month = isset( $settings->start_month ) ? $settings->start_month : date( 'n' );
+		$start_day = isset( $settings->start_day ) ? $settings->start_day : date( 'j' );
+		$start_hour = isset( $settings->start_hours ) ? $settings->start_hours :'0';
+		$start_minutes = isset( $settings->start_minutes ) ? $settings->start_minutes :'0';
+
 		date_default_timezone_set( $settings->time_zone );
+		// date time now.
 		$date = new DateTime();
 		$date->format( 'Y-n-j H:i' );
 		$now = $date->getTimestamp();
 
-		$set_time = $year . '-' . $month . '-' . $day . ' ' . $hour . ':' . $minutes;
-		$date1 = new DateTime( $set_time );
-		$expire = $date1->getTimestamp();
+		// start date time.
+		$set_start_time = $start_year . '-' . $start_month . '-' . $start_day . ' ' . $start_hour . ':' . $start_minutes;
+		$date1 = new DateTime( $set_start_time );
+		$start = $date1->getTimestamp();
 
-		if ( $expire < $now ) {
+		// expiry date time.
+		$set_time = $year . '-' . $month . '-' . $day . ' ' . $hour . ':' . $minutes;
+		$date2 = new DateTime( $set_time );
+		$expire = $date2->getTimestamp();
+		$is_start = $this->is_start( $settings );
+
+		if ( $expire < $now || ! $is_start ) {
+			$display = false;
+		}
+		return $display;
+	}
+	/**
+	 * Check module start date time
+	 *
+	 * @param object $settings Setting object.
+	 * @return object
+	 */
+	public function is_start( $settings ) {
+		$display = true;
+		$start_year = isset( $settings->start_year ) ? $settings->start_year : date( 'Y' );
+		$start_month = isset( $settings->start_month ) ? $settings->start_month : date( 'n' );
+		$start_day = isset( $settings->start_day ) ? $settings->start_day : date( 'j' );
+		$start_hour = isset( $settings->start_hours ) ? $settings->start_hours :'0';
+		$start_minutes = isset( $settings->start_minutes ) ? $settings->start_minutes :'0';
+
+		date_default_timezone_set( $settings->time_zone );
+		// date time now.
+		$date = new DateTime();
+		$date->format( 'Y-n-j H:i' );
+		$now = $date->getTimestamp();
+
+		// start date time.
+		$set_start_time = $start_year . '-' . $start_month . '-' . $start_day . ' ' . $start_hour . ':' . $start_minutes;
+		$date1 = new DateTime( $set_start_time );
+		$start = $date1->getTimestamp();
+
+		if ( $start > $now ) {
 			$display = false;
 		}
 		return $display;
@@ -136,8 +180,55 @@ FLBuilder::register_module('BSFBBTimedModule',
 			'title'         => __( 'Settings', 'timed-content-for-beaver-builder' ),
 			'sections'      => array(
 				// Timed layout Option.
+				'time_zone'       => array( // Section.
+					'title'         => 'Time Zone', // Section Title.
+					'fields'        => array( // Section Fields.
+						'time_zone'          => array(
+							'type'          => 'timezone',
+							'label'         => __( 'Time Zone', 'timed-content-for-beaver-builder' ),
+							'default'		=> 'UTC',
+						),
+					),
+				),
+				'start_time'       => array( // Section.
+					'title'         => 'Start Date Time', // Section Title.
+					'fields'        => array( // Section Fields.
+						'start_day'       => array(
+							'type'          => 'select',
+							'label'         => __( 'Day', 'timed-content-for-beaver-builder' ),
+							'default'		=> date( 'j' ),
+							'options'       => Timed_Content_Helper::get_dropdown_options( 1, 31 ),
+						),
+						'start_month'       => array(
+							'type'          => 'select',
+							'label'         => __( 'Month', 'timed-content-for-beaver-builder' ),
+							'class'         => '',
+							'default'		=> date( 'n' ),
+							'options'       => Timed_Content_Helper::get_dropdown_options( 1, 12 ),
+						),
+						'start_year'				=> array(
+							'type'          => 'text',
+							'label'         => __( 'Year', 'timed-content-for-beaver-builder' ),
+							'default'       => date( 'Y' ),
+							'maxlength'     => '4',
+							'size'          => '5',
+						),
+						'start_hours'       => array(
+							'type'          => 'select',
+							'default'       => '00',
+							'label'         => __( 'Hour', 'timed-content-for-beaver-builder' ),
+							'options'       => Timed_Content_Helper::get_dropdown_options( 0, 23 ),
+						),
+						'start_minutes'   => array(
+							'type'          => 'select',
+							'default'       => '0',
+							'label'         => __( 'Minutes', 'timed-content-for-beaver-builder' ),
+							'options'       => Timed_Content_Helper::get_dropdown_options( 0, 59 ),
+						),
+					),
+				),
 				'layout'       => array( // Section.
-					'title'         => 'Select Time', // Section Title.
+					'title'         => 'End Date Time', // Section Title.
 					'fields'        => array( // Section Fields.
 						'day'       => array(
 							'type'          => 'select',
@@ -171,14 +262,9 @@ FLBuilder::register_module('BSFBBTimedModule',
 							'label'         => __( 'Minutes', 'timed-content-for-beaver-builder' ),
 							'options'       => Timed_Content_Helper::get_dropdown_options( 0, 59 ),
 						),
-						'time_zone'          => array(
-							'type'          => 'timezone',
-							'label'         => __( 'Time Zone', 'timed-content-for-beaver-builder' ),
-							'default'		=> 'UTC',
-						),
 						'expire_content_action'       => array(
 							'type'          => 'select',
-							'label'         => __( 'Action After Timer Expiry', 'timed-content-for-beaver-builder' ),
+							'label'         => __( 'Action After Time Expiry', 'timed-content-for-beaver-builder' ),
 							'default'       => 'hide',
 							'class'         => '',
 							'options'       => array(
@@ -200,7 +286,7 @@ FLBuilder::register_module('BSFBBTimedModule',
 							'default'       => __( 'Enter message text here.','timed-content-for-beaver-builder' ),
 							'connections' => array( 'string', 'html' ),
 						),
-				),
+					),
 				),
 			),
 		),

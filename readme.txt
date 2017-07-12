@@ -63,8 +63,14 @@ Props to <a href="http://www.tlc-online.co.uk/" target="_blank">TLC Online</a> f
 ## Frequently Asked Questions ##
 
 ## Screenshots ##
+1. Content options 
+2. Set Start and End Time option
+3. Typography options 
 
 ## Changelog ##
+
+### 1.0.1 ###
+- New : Start Date Time option
 
 ### 1.0.0 ###
 - Initial release
