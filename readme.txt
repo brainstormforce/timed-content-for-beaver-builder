@@ -3,7 +3,7 @@ Contributors: brainstormforce, rahulwalunje-1
 Donate link: https://www.brainstormforce.com/payment/
 Requires at least: 4.4
 Tags: beaver builder, page builder plugin, timed content, php based timed content
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 Tested up to: 4.8
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
@@ -27,7 +27,7 @@ Since this module is easy to use and highly customizable, you can use for variou
 
 Made with love at <a href="https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=timed-content-for-bb&utm_medium=description">Brainstorm Force</a>! 
 
-See the Timed Content For Beaver Builder in action! - <a href="https://www.ultimatebeaver.com/beaver-builder-free/timed-content/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=Description" target="_blank">Launch the Demo</a>
+See the Timed Content For Beaver Builder in action! - <a href="https://www.ultimatebeaver.com/beaver-builder-free/timed-content/?utm_source=wp-repo&utm_campaign=timed-content-for-bb&utm_medium=demo-link" target="_blank">Launch the Demo</a>
 ## What’s More? ##
 
 If you like this plugin, please leave us a good review and rating! Your feedback and suggestions will be highly appreciated.
