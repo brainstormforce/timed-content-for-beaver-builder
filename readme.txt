@@ -27,7 +27,7 @@ Since this module is easy to use and highly customizable, you can use for variou
 
 Made with love at <a href="https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=timed-content-for-bb&utm_medium=description">Brainstorm Force</a>! 
 
-See the Timed Content For Beaver Builder in action! - <a href="https://www.ultimatebeaver.com/beaver-builder-free/timed-content/?utm_source=wp-repo&utm_campaign=timed-content-for-bb&utm_medium=demo-link" target="_blank">Launch the Demo</a>
+To know more about the Timed Content module - <a href="https://www.ultimatebeaver.com/beaver-builder-free/timed-content/?utm_source=wp-repo&utm_campaign=timed-content-for-bb&utm_medium=demo-link" target="_blank">Click here</a>.
 ## What’s More? ##
 
 If you like this plugin, please leave us a good review and rating! Your feedback and suggestions will be highly appreciated.
