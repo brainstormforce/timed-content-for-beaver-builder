@@ -1,6 +1,6 @@
 === Timed Content For Beaver Builder ===
-Contributors: brainstormforce, rahulwalunje-1
-Donate link: https://www.brainstormforce.com/payment/
+Contributors: brainstormforce
+Donate link: https://www.paypal.me/BrainstormForce
 Requires at least: 4.4
 Tags: beaver builder, page builder plugin, timed content, php based timed content
 Stable tag: 1.0.2
