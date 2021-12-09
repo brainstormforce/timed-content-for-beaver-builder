@@ -16,12 +16,6 @@ if ( FLBuilderModel::is_builder_active() && ! $display ) { ?>
 		text-align: center;
 	  }
 <?php
-} else {
-	if ( ! $display && 'msg' != $settings->expire_content_action ) { ?>
-		.fl-module-timed-content-module.fl-node-<?php echo $id; ?> {
-			display : none;
-		}
-<?php }
 }
 
 if ( ! empty( $settings->timed_msg_font ) && 'Default' != $settings->timed_msg_font['family'] ) { ?>
