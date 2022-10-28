@@ -1,10 +1,10 @@
 === Timed Content For Beaver Builder ===
-Contributors: brainstormforce
+Contributors: pratikchaskar
 Donate link: https://www.paypal.me/BrainstormForce
 Requires at least: 4.4
 Tags: beaver builder, page builder plugin, timed content, php based timed content
-Stable tag: 1.0.2
-Tested up to: 6.0
+Stable tag: 1.0.3
+Tested up to: 6.1
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
   
@@ -69,6 +69,9 @@ Props to <a href="http://www.tlc-online.co.uk/" target="_blank">TLC Online</a> f
 3. Typography options 
 
 ## Changelog ##
+
+### 1.0.3 ###
+- Improvement: Added compatibility to WordPress 6.1 
 
 ### 1.0.1 ###
 - New : Start Date Time option
