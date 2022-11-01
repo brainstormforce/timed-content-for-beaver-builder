@@ -3,9 +3,9 @@
  * Plugin Name: Timed Content for Beaver Builder
  * Plugin URI: https://www.brainstormforce.com/
  * Description: Timed Content For Beaver builder plugin allows users to hide content after given time.
- * Version: 1.0.3
- * Author: Pratik Chaskar
- * Author URI: https://pratikchaskar.com
+ * Version: 1.0.2
+ * Author: Brainstorm Force
+ * Author URI: http://www.brainstormforce.com
  * Text Domain: timed-content-for-beaver-builder
  *
  * @package timed-content-for-beaver-builder
