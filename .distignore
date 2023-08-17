@@ -30,3 +30,4 @@ node_modules
 .github
 .wordpress-org
 README.md
+package-lock.json
