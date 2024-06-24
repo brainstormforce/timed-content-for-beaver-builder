@@ -9,7 +9,7 @@ $display = $module->is_expired( $settings );
 $is_start = $module->is_start( $settings );
 if ( $display ) {
 	if ( isset( $settings->content_type ) && 'content' == $settings->content_type ) {
-		echo '<div class="timed-content-wrapper">' . Timed_Content_Helper::get_timed_content( $settings) . '</div>';
+		echo '<div class="timed-content-wrapper">' . Timed_Content_Helper::get_timed_content( $settings ) . '</div>';
 	} else {
 		echo Timed_Content_Helper::get_timed_content( $settings );
 	}
