@@ -62,7 +62,7 @@ if ( ! class_exists( 'BB_Timed_Content' ) ) {
 			echo '<div class="notice notice-error">';
 
 			/* Translators: Timed Content Module For Beaver Builder */
-				echo '<p>' . sprintf( __( 'The <strong>Timed Content Module For Beaver Builder</strong> plugin requires <strong><a href="%s">Beaver Builder</strong></a> plugin installed & activated.', 'timed-content-for-beaver-builder' ) . '</p>', $url );
+				echo '<p>' . sprintf( __( 'The <strong>Timed Content Module For Beaver Builder</strong> plugin requires <strong><a href="%s">Beaver Builder</strong></a> plugin installed & activated.', 'timed-content-for-beaver-builder' ) . '</p>', esc_url( $url ) );
 
 			echo '</div>';
 		}
