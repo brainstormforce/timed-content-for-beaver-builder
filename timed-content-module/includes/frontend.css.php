@@ -34,7 +34,7 @@ if ( ! empty( $settings->timed_msg_font ) && 'Default' != $settings->timed_msg_f
 	color: #<?php echo esc_attr( $settings->timed_msg_color ); ?>;
 	font-size: <?php echo esc_attr( $settings->timed_msg_size ); ?>px;
 	line-height: <?php echo esc_attr( $settings->timed_msg_line_height ); ?>px;
-	letter-spacing: <?php echo esc_attr( ( $settings->timed_msg_letter_spacing ) ); ?>px;
+	letter-spacing: <?php echo esc_attr( $settings->timed_msg_letter_spacing ); ?>px;
 }
 
 <?php if ( ! empty( $settings->timed_content_font ) && 'Default' != $settings->timed_content_font['family'] ) { ?>
