@@ -4,8 +4,8 @@
 **Donate link:** https://www.paypal.me/BrainstormForce
 **Requires at least:** 4.4
 **Tags:** beaver builder, page builder plugin, timed content, php based timed content
-**Stable tag:** 1.0.0
-**Tested up to:** 6.5
+**Stable tag:** 1.0.4
+**Tested up to:** 6.6
 **License:** GPLv2 or later
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
