@@ -1,6 +1,6 @@
 # Timed Content For Beaver Builder #
 
-**Contributors:** [pratikchaskar](https://profiles.wordpress.org/pratikchaskar/)
+**Contributors:** [brainstormforce](https://profiles.wordpress.org/brainstormforce)
 **Donate link:** https://www.paypal.me/BrainstormForce
 **Requires at least:** 4.4
 **Tags:** beaver builder, page builder plugin, timed content, php based timed content
