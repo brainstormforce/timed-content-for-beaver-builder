@@ -303,6 +303,7 @@ FLBuilder::register_module('BSFBBTimedModule',
 							'type'          => 'select',
 							'label'         => __( 'Message Tag', 'timed-content-for-beaver-builder' ),
 							'default'       => 'h4',
+							'sanitize' => array('FLBuilderUtils::esc_tags', 'h4'),
 							'options'       => array(
 								'h1'      => __( 'H1', 'timed-content-for-beaver-builder' ),
 								'h2'      => __( 'H2', 'timed-content-for-beaver-builder' ),
