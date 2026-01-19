@@ -1,10 +1,8 @@
 # Timed Content For Beaver Builder #
 
-**Contributors:** [brainstormforce](https://profiles.wordpress.org/brainstormforce)
-**Donate link:** https://www.paypal.me/BrainstormForce
 **Requires at least:** 4.4
 **Tags:** beaver builder, page builder plugin, timed content, php based timed content
-**Stable tag:** 1.0.4
+**Stable tag:** 1.0.5
 **Tested up to:** 6.9
 **License:** GPLv2 or later
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
@@ -38,7 +36,6 @@ Display special offers, discount codes for valid time period & hide it automatic
 Works with all timezones
 Works like any other Beaver Builder module. Thus, it's easy!
 
-Made with love at <a href="https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=timed-content-for-bb&utm_medium=description">Brainstorm Force</a>! 
 
 ## What’s More? ##
 
@@ -58,8 +55,6 @@ You can also consider checking out our other plugins:
 
 <a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/column-seperator/?utm_source=wp-repo&utm_campaign=timed-content-for-bb&utm_medium=other-plugins”>Column Separator for Beaver Builder</a>: This plugin will no longer leave you pondering for a column separator in Beaver Builder. You can add it right away!
  
-Visit our website to know more about the top WordPress products and services we offer. You can also stay updated with our upcoming endeavors by following us on <a href=”https://www.brainstormforce.com/go/brainstorm-force-facebook-page/?utm_source=wp-repo&utm_campaign=timed-content-for-bb&utm_medium=share”>Facebook</a> and <a href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_source=wp-repo&utm_campaign=timed-content-for-bb&utm_medium=share”>Twitter</a>.
-
 ## Acknowledgements ##
 Props to <a href="http://www.tlc-online.co.uk/" target="_blank">TLC Online</a> for their idea and sponsoring development of this Beaver Builder module.
 
