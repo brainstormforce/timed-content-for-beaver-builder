@@ -5,6 +5,23 @@
  * @package timed-content-for-beaver-builder
  */
 
+
+/**
+ * Sanitize the selected HTML tag for the expiry message.
+ *
+ * Beaver Builder expects the `sanitize` field config to be a callable. The
+ * original plugin passed an array that is interpreted as a malformed PHP
+ * callback under newer Beaver Builder/PHP versions.
+ *
+ * @param string $value Raw field value.
+ * @return string
+ */
+function bsfbb_timed_content_sanitize_tag( $value ) {
+	$allowed_tags = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'span', 'p' );
+	$value = is_string( $value ) ? strtolower( trim( $value ) ) : '';
+	return in_array( $value, $allowed_tags, true ) ? $value : 'h4';
+}
+
 /**
  * Timed Content Module for Beaver Builder
  *
@@ -48,7 +65,8 @@ class BSFBBTimedModule extends FLBuilderModule {
 		$start_hour = isset( $settings->start_hours ) ? $settings->start_hours :'0';
 		$start_minutes = isset( $settings->start_minutes ) ? $settings->start_minutes :'0';
 
-		date_default_timezone_set( $settings->time_zone );
+		$time_zone = ( isset( $settings->time_zone ) && is_string( $settings->time_zone ) && '' !== $settings->time_zone ) ? $settings->time_zone : 'UTC';
+		date_default_timezone_set( $time_zone );
 		// date time now.
 		$date = new DateTime();
 		$date->format( 'Y-n-j H:i' );
@@ -84,7 +102,8 @@ class BSFBBTimedModule extends FLBuilderModule {
 		$start_hour = isset( $settings->start_hours ) ? $settings->start_hours :'0';
 		$start_minutes = isset( $settings->start_minutes ) ? $settings->start_minutes :'0';
 
-		date_default_timezone_set( $settings->time_zone );
+		$time_zone = ( isset( $settings->time_zone ) && is_string( $settings->time_zone ) && '' !== $settings->time_zone ) ? $settings->time_zone : 'UTC';
+		date_default_timezone_set( $time_zone );
 		// date time now.
 		$date = new DateTime();
 		$date->format( 'Y-n-j H:i' );
@@ -303,7 +322,7 @@ FLBuilder::register_module('BSFBBTimedModule',
 							'type'          => 'select',
 							'label'         => __( 'Message Tag', 'timed-content-for-beaver-builder' ),
 							'default'       => 'h4',
-							'sanitize' => array('FLBuilderUtils::esc_tags', 'h4'),
+							'sanitize' => 'bsfbb_timed_content_sanitize_tag',
 							'options'       => array(
 								'h1'      => __( 'H1', 'timed-content-for-beaver-builder' ),
 								'h2'      => __( 'H2', 'timed-content-for-beaver-builder' ),
